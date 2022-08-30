@@ -189,3 +189,13 @@ if(operator.innerText=='+'){
 
 
 });
+
+// defining clear function 
+
+clear.addEventListener('click',()=>{
+    num1.innerText='';
+    num2.innerText='';
+    operator.innerText='';
+    result.innerText='';
+
+})
