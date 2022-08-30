@@ -44,3 +44,148 @@ let star = document.querySelector('#star');
 let dot = document.querySelector('#dot');
 let hash = document.querySelector('#hash');
 let sqrt = document.querySelector('#sqrt');
+
+// function oneChange(){
+//     num1.innerText+=1;
+// }
+
+// Adding event listeners for all keys 
+
+one.addEventListener('click',()=>{
+    if(operator.innerHTML){
+        num1.innerText+=1;}
+        else {
+            num2.innerText+=1;
+        }
+});
+
+two.addEventListener('click',()=>{
+    if(operator.innerHTML){
+        num1.innerText+=2;}
+        else {
+            num2.innerText+=2;
+        }
+});
+
+three.addEventListener('click',()=>{
+    if(operator.innerHTML){
+        num1.innerText+=3;}
+        else {
+            num2.innerText+=3;
+        }
+});
+
+four.addEventListener('click',()=>{
+    if(operator.innerHTML){
+        num1.innerText+=4;}
+        else {
+            num2.innerText+=4;
+        }
+});
+
+five.addEventListener('click',()=>{
+    if(operator.innerHTML){
+        num1.innerText+=5;}
+        else {
+            num2.innerText+=5;
+        }
+});
+
+six.addEventListener('click',()=>{
+    if(operator.innerHTML){
+        num1.innerText+=6;}
+        else {
+            num2.innerText+=6;
+        }
+});
+
+seven.addEventListener('click',()=>{
+    if(operator.innerHTML){
+        num1.innerText+=7;}
+        else {
+            num2.innerText+=7;
+        }
+});
+
+eight.addEventListener('click',()=>{
+    if(operator.innerHTML){
+        num1.innerText+=8;}
+        else {
+            num2.innerText+=8;
+        }
+});
+
+nine.addEventListener('click',()=>{
+    if(operator.innerHTML){
+        num1.innerText+=9;}
+        else {
+            num2.innerText+=9;
+        }
+});
+
+zero.addEventListener('click',()=>{
+    if(operator.innerHTML){
+        num1.innerText+=0;}
+        else {
+            num2.innerText+=0;
+        }
+});
+
+
+// adding event listeners for operands
+
+add.addEventListener('click', ()=>{
+    operator.innerText='+';
+})
+
+subtract.addEventListener('click', ()=>{
+    operator.innerText='-';
+})
+
+multiply.addEventListener('click', ()=>{
+    operator.innerText='x';
+})
+
+divide.addEventListener('click', ()=>{
+    operator.innerText='/';
+})
+
+
+
+// defining opertor functions
+function sum (){
+    let sum = parseInt(num1.innerText) + parseInt(num2.innerText);
+    result.innerText = sum;
+}
+
+function minus (){
+    let difference = parseInt(num2.innerText)- parseInt(num1.innerText);
+    result.innerText = difference;
+}
+
+function division(){
+    let quotient = parseInt(num2.innerText)/parseInt(num1.innerText);
+    result.innerText = quotient;
+}
+
+function multplication(){
+    let product = parseInt(num1.innerText) * parseInt(num2.innerText);
+    result.innerText = product;
+}
+
+
+// defining equal to function
+
+equal.addEventListener('click', ()=>{
+if(operator.innerText=='+'){
+    sum();
+} else if (operator.innerText=='-'){
+    minus();
+} else if (operator.innerText=='x'){
+    multplication();
+} else {
+    division();
+}
+
+
+});
